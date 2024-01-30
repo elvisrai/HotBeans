@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotbeans</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="courses.css">
+    <script src="https://kit.fontawesome.com/0f1c233e20.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Navbar Section-->
+ <nav class="navbar">
+  <div class="navbar__container">
+    <a href="index.html"><img src="assets/logoc.png" alt="logo" id="navbar__logo"></a>
+    <!-- <a href="/" id="navbar__logo"><i class="fas fa"></i>gemHOTBEANS</a> -->
+    <div class="navbar__toggle" id="mobile-menu"> <!-- THIS CHANGES THE HAMBURGER MENU TO X WHEN CLICKED -->
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </div>
+    <ul class="navbar__menu">
+      <li class="navbar__item">
+        <!-- change the / by adding the name of the page or link to redirect to different page -->
+        <!-- <a href="careers.html" class="navbar__links">Careers</a> -->
+        <div class="dropdown">
+          <button class="dropbtn">Careers
+          </button>
+          <div class="dropdown-content-careers">
+            <a href="roles.html">Roles</a>
+            <a href="apprentice.html">Apprenticeships</a>
+            <a href="courses.html">Courses</a>
+          </div>
+          </div>
+      </li>
+      <li class="navbar__item" >
+        <!-- <a href="about.html" class="navbar__links">About Us</a> -->
+        <div class="dropdown">
+          <button class="dropbtn">About Us
+          </button>
+          <div class="dropdown-content-about">
+            <a href="explore.html">Explore and Learn</a>
+            <a href="culture.html">Our Culture and Values</a>
+          </div>
+          </div>
+      </li>
+      <!-- <li class="navbar__item">
+        <a href="join.html" class="navbar__links">Join Us</a>
+      </li> -->
+      <li class="navbar__item">
+        <!-- <a href="logform.html" class="button">Join Us</a> -->
+        <div class="dropdown">
+          <button class="dropbtn">Join Us
+          </button>
+          <div class="dropdown-content-join">
+            <a href="logform.html">Sign In</a>
+            <a href="create.html">Create Account</a>
+          </div>
+          </div>
+      </li>
+      <li class="navbar__item">
+        <!-- <a href="help.html" class="navbar__links">Help</a> -->
+        <div class="dropdown">
+          <button class="dropbtn">Help
+          </button>
+          <div class="dropdown-content-help">
+            <a href="faq.html">FAQs</a>
+          </div>
+          </div>
+      </li>
+      <li class="navbar__item">
+        <!-- <a href="contact.html" class="navbar__links">Contact Us</a> -->
+        <div class="dropdown">
+          <button class="dropbtn">Contact Us
+          </button>
+          <div class="dropdown-content-contact">
+            <a href="enquiry.html">Enquiry Form</a>
+          </div>
+          </div>
+      </li>
+      <!-- <li class="navbar__item">
+        <a href="/" class="navbar__links"> <i class="fa-solid fa-magnifying-glass"></i></a>
+      </li> -->
+      
+    </ul>
+  </div>
+ </nav>
+
+ <!-- COURSES SECTION -->
+ 
+<div class="services">
+    <h1>Websites We Highly Recommend!</h1>
+<p>
+  The following websites are the portals into the programming world that 
+  Hotbeans's staff have carefully selected and strongly recommended. 
+  <p>
+
+<div class="wrap">
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="assets/w3schools.jpg" alt="Avatar" width= "320px" height= "325px">
+      <p>(Hover or click to see why we recommend this W3schools)</p>
+    </div>
+    <div class="flip-card-back">
+      <p>
+        W3schools is one of the oldest website learning platform available for free
+        with 70M visitors each month. The courses are well organized with perfectly simplified
+        instructions. It provides interface to edit the code to see the effect of changes in the code. 
+        You can also copy and paste the code into your own projects. In W3schools, you can find 
+        chapters on almost anything and everything. Popular courses that it offers are HTML, CSS, JavaScript,
+        C, Python, C#, React, PHP, SQL and more.
+      </p>
+    </div>
+  </div>
+</div>
+<button class="main__btn btn__center"><a href="https://www.w3schools.com/">Visit website</a></button>
+</div>
+
+<div class="wrap">
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front" >
+      <img src="assets/freecc.png" alt="Avatar" width= "320px" height= "325px">
+      <p>(Hover or click to see why we recommend this Freecodecamp)</p>
+    </div>
+    <div class="flip-card-back">
+      <p>
+        Dedicated to teaching the world how to code for free, Freecodecamp offers lessons that are thoughtfully put together
+        with instructions on the left; code editor in the middle and output on the right. The best part 
+        of this website is that you can earn verified certifications by completing various projects step-by-step.
+        Futhermore, it also has an active forum to get help from other programmers in the community. Unlike
+        codecademy or udemy, even the advanced courses are 100% free.
+      </p>
+    </div>
+  </div>
+</div>
+<button class="main__btn btn__center"><a href="https://www.freecodecamp.org/">Visit website</a></button>
+</div>
+
+<div class="wrap">
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="assets/stack.jpg" alt="Avatar" width= "320px" height= "325px">
+      <p>(Hover or click to see why we recommend this Stack Overflow)</p>
+    </div>
+    <div class="flip-card-back">
+      <p>
+        Errors and bugs are inevitable in programming world.  Instead of courses, 
+        Stack Overflow is a huge community where programmers of all experience levels teach and learn from one 
+        another's mistakes. If you're stuck on a project and are having problems finding answers, 
+        you're more likely to find them on this public platform. If not, 
+        you may simply ask questions and get multple answers from programmers 
+        who are willing to help no matter which programming language you are using.
+      </p>
+    </div>
+  </div>
+</div>
+<button class="main__btn btn__center"><a href="https://stackoverflow.com/">Visit website</a></button>
+</div>
+</div>
+
+
+<!-- Footer Section -->
+ 
+<div class="footer__container">
+  <div class="social__media">
+    <div class="social__media--wrap">
+      <div class="footer__logo">
+        <a href="index.html" id="footer__logo"><i class="fas fa-gem"></i>HOTBEANS</a>
+      </div>
+      <p class="website__rights"> © Hotbeans 2023. All rights reserved.</p>
+      <div class="social__icons">
+        <a href="https://www.facebook.com/" class="social__icons--link" target="_blank">
+          <i class="fab fa-facebook" style="color:#5266d5"></i>
+        </a>
+        <a href="https://www.instagram.com/" class="social__icons--link" target="_blank">
+          <i class="fab fa-instagram"></i>
+        </a> 
+        <a href="https://twitter.com/" class="social__icons--link" target="_blank">
+          <i class="fab fa-twitter" style="color: #1DA1F2;"></i>
+        </a>
+        <a href="https://www.linkedin.com/" class="social__icons--link" target="_blank">
+          <i class="fab fa-linkedin" style="color: #0077b5;"></i>
+        </a>
+        <a href="https://www.youtube.com/" class="social__icons--link" target="_blank">
+          <i class="fab fa-youtube" style="color: #FF0000;"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src = "app.js"></script>
+</body>
+</html>

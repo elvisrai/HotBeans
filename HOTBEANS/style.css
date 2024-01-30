@@ -1,0 +1,719 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+/* formats bg of navbar */
+.navbar {
+    background: #141414;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 999;/* like 3dimension wrapping. 999 ensures that no matter where I'm on site,
+    whenever I scroll it will always be above any other content  */
+}
+
+.navbar__container{
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    z-index: 1;
+    width:100%;
+    max-width: 1300px;
+    margin: 0 auto; /* the values of margin in order are: top right bottom left */
+    padding: 0 50px;
+}
+
+/* formats the logo */
+#navbar__logo {
+    background-color: #ff8177;
+    background-image: linear-gradient(to top, #ff0844 0%, #ffb199 100%);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    display: flex;
+    align-items: center;
+    cursor: pointer;  /* mouse: arrow changes to hand */
+    text-decoration: none;
+    font-size: 2rem;
+    height: 5rem;
+    width: 14rem;
+}
+
+/* actual icon */
+.fa-gem{
+    margin-right: 0.5rem;
+}
+
+/* changed the menu from list to horizontal  */
+.navbar__menu{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    text-align: center;
+}
+
+/* moved menu lists slightly to top execpt join us button*/
+.navbar__item{
+    height: 50px;  /* vertical space between menu list.
+    For eg,  like space between careers and about us. */
+}
+
+/* dropdown menu!!!!!!!!!!!!!! */
+.dropbtn {
+    background-color: #131313;
+    color: white;
+    padding: 10px 50px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;   
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* dropdown careers */
+.dropdown-content-careers{
+    background-color: #141414;
+    display: none;
+    position: absolute;
+    min-width: 159px;
+    /* box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); */
+    z-index: 1;
+    border-radius: 4px;
+}
+
+.dropdown-content-careers a {
+    color: #fff; /* color of sub menu texts */
+    padding: 12px 15px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content-careers a:hover {
+    color: #21d4fd; /* color of sub menu texts on hover */
+    border-radius: 4px;
+}
+
+.dropdown:hover .dropdown-content-careers{
+    display: block;
+}
+
+/* dropdown about us */
+.dropdown-content-about {
+    background-color: #141414;
+    display: none;
+    position: absolute;
+    min-width: 160px;
+    z-index: 1;
+    border-radius: 4px;
+}
+
+.dropdown-content-about a {
+    color: #fff; /* color of sub menu texts */
+    padding: 12px 15px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content-about a:hover {
+    color: #21d4fd; /* color of sub menu texts on hover */
+    border-radius: 4px;
+}
+
+.dropdown:hover .dropdown-content-about{
+    display: block;
+}
+
+/* dropdown join us */
+.dropdown-content-join {
+    background-color: #141414;
+    display: none;
+    position: absolute;
+    min-width: 150px;
+    z-index: 1;
+    border-radius: 4px;
+}
+
+.dropdown-content-join a {
+    color: #fff; /* color of sub menu texts */
+    padding: 12px 15px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content-join a:hover {
+    color: #21d4fd; /* color of sub menu texts on hover */
+    border-radius: 4px;
+}
+
+.dropdown:hover .dropdown-content-join {
+    display: block;
+}
+
+/* dropdown help*/
+.dropdown-content-help{
+    background-color: #141414;
+    display: none;
+    position: absolute;
+    min-width: 136px;
+    z-index: 1;
+    border-radius: 4px; 
+}
+
+.dropdown-content-help a {
+    color: #fff; /* color of sub menu texts */
+    padding: 10px 3px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content-help a:hover {
+    color: #21d4fd; /* color of sub menu texts on hover */
+    border-radius: 4px;
+}
+
+.dropdown:hover .dropdown-content-help{
+    display: block;
+}
+
+/* dropdown contact */
+.dropdown-content-contact {
+    background-color: #141414;
+    display: none;
+    position: absolute;
+    min-width: 182px;
+    z-index: 1;
+    border-radius: 4px;
+    /* margin: 1.4px; */
+}
+
+.dropdown-content-contact a {
+    color: #fff; /* color of sub menu texts */
+    padding: 12px 15px;
+    text-decoration: none;
+    display: block; 
+}
+
+.dropdown-content-contact a:hover {
+    color: #21d4fd; /* color of sub menu texts on hover */
+    border-radius: 4px;
+}
+
+.dropdown:hover .dropdown-content-contact{
+    display: block;
+}
+
+
+.dropdown:hover .dropbtn {
+    /* intuitive purple */
+    background: #DA22FF;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #b721ff 0%, #21d4fd 100%);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right,#b721ff 0%, #21d4fd 100%); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: #fff; /* color of text above padding   */
+    transition: all 2s ease;
+}
+
+
+
+/* mobile responsive navbar */
+/* triggers classes when the screen hits 960px width */
+@media screen and (max-width: 960px) {
+
+    .navbar__container {
+        display: flex;
+        justify-content: space-between;
+        height: 80px;
+        z-index: 1;
+        width: 100%;
+        max-width: 1300px;
+        padding: 10px 10px;
+    }
+
+    .navbar__menu {
+        display: grid;
+        grid-template-columns: auto;
+        margin: 0;
+        width: 100%;
+        position: absolute;
+        /* right: 5px; */
+        top: -1000px; /* animation of how menu drops down from top */
+        opacity: 0;
+        transition: all 0.5s ease;
+        height: 50vh;  /* viewport height */
+        z-index: -1; /* the menu disappeared into the bar */
+        background: #131313;
+    }
+
+    /* triggered by JS */
+    .navbar__menu.active {
+        background: #131313;
+        top: 100%;
+        opacity: 1;
+        transition: all 0.5s ease;
+        z-index: 99;
+        font-size: 1rem;
+    }
+
+    #navbar__logo{
+        padding-left: 25px;
+        margin-top: 2px;
+        width: 150px; 
+        height: 50px; /* moves the position of logo */
+    }
+
+/* formats the menu bar */
+    .navbar__toggle .bar {
+        width: 25px;
+        height: 3px;
+        margin: 5px auto;
+        transition: all 0.3s ease-in-out;
+        background: #fff;
+    }
+
+    .navbar__item{
+        width: 100%;
+        margin-top: -50px;  /* moves all the menu to the top */
+    }
+    
+    #mobile-menu{
+        position: absolute;
+        top: 20%;
+        right: 5%;
+        transform: translate(5%, 20%);
+    }
+
+    
+/* made menu bar icon appear on the corner*/
+    .navbar__toggle .bar {
+        display: block;
+        cursor: pointer;
+    }
+/* animation click effect of bars to X */
+    #mobile-menu.is-active .bar:nth-child(2) {
+        opacity: 0;
+    }
+    #mobile-menu.is-active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+    #mobile-menu.is-active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+}
+
+
+
+/* Hero Section CSS */
+
+.main{
+    background-color: #141414; /* changes the background colour */
+}
+
+.main__container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-self: center;
+    margin: 0 auto;
+    height: 90vh; /* height 90% of the screen */
+    background-color: #141414;
+    z-index: 1;
+    width: 100%;
+    max-width: 1300px;
+    padding: 0 50px;  /* moved the codeg.svg sightly to the right */
+}
+
+/* formats the h1 of html hero section */
+.main__content h1{
+    font-size: 4rem;
+    background-color: #ff8177;
+    background-image: linear-gradient(to top, #ff0844 0%, #ffb199 100%);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+}
+
+/* formats the h2 of html hero section */
+.main__content h2{
+    font-size: 4rem;
+    background-color: #ff8177;
+    background-image: linear-gradient(to right, #b721ff 0%, #21d4fd 100%);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+}
+
+/* formats the p tag of html hero section */
+.main__content p{
+    margin-top: 1rem;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #fff;
+}
+
+/* formats the Apply here button of html hero section */
+.main__btn {
+    font-size: 1rem;
+    /* cosmic fusion */
+    background: #ff00cc;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #333399, #ff00cc);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #333399, #ff00cc); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    padding: 14px 32px; /* made the h1 and h2 go slighly up by adding button arpund Apply here */
+    border: none;
+    border-radius: 4px; /* makes the button edge slighly curve */
+    color: #fff;
+    margin-top: 2rem; /* made the button go slightly below p contents */
+    cursor: pointer;
+    position: relative;
+    transition: all 0.35s;
+    outline: none;
+}
+
+/* removes the underline below the link apply here*/
+.main__btn a{
+    position: relative;
+    z-index: 2; /* the reason we're doing this is because of the hover effect on the button */
+    color: #fff;
+    text-decoration: none;
+}
+/* this is essentially in a place these valies after in the actual
+*/
+.main__btn:after {
+    position: absolute;
+    content: ''; /* makes it so that when you see the hover effect,
+    there's nothing except what the color is */
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #4837ff;
+    transition: all 0.3s;
+    border-radius: 4px;
+}
+
+.main__btn :hover {
+    color: #fff;
+}
+
+.main__btn:hover:after {
+    width: 100%;
+}
+
+.main__img--container {
+    text-align: center;
+}
+
+#main__img {
+    height: 80%;
+    width: 80%;
+}
+
+/* Mobile Responsive */
+
+@media screen and (max-width: 768px) {
+    .main_container {
+       display: grid;
+       grid-template-columns: auto;
+       align-items: center;
+       justify-self: center;
+       width: 100%;
+       margin: 0 auto;
+       height: 90vh;
+    }
+
+    .main__content {
+        text-align: center; /*aligns the h1, h2, p and button in the center */
+        margin-bottom: 1rem;
+    }
+
+    .main__content h2{
+        font-size: 2.5rem;
+        margin-top: 3rem;
+    }
+
+    .main__content h1{
+        font-size: 3rem;
+    }
+
+    .main__content p{
+        margin-top: 1rem;
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .main__content h2{
+        font-size: 2rem;
+        margin-top: 2rem;
+    }
+
+    .main__content h1{
+        font-size: 2rem;
+    }
+
+    .main__content p{
+        margin-top: 2rem;
+        font-size: 1.5rem;
+    }
+    .main__btn {
+        padding: 12px 36px;
+        margin: 2.5rem 0;
+    }
+}
+
+/* Services Section CSS */
+
+.services {
+    background: #141414;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 80vh; /* gap between the employees pictures and the footer section */
+}
+
+.services h1{
+    background-color: #ff8177;
+    /* color gradient changes from light to dark as we go to right */
+    background-image: linear-gradient(
+        to right, #ff8177 0%,
+        #ff867a 0%,
+        #ff8c7f 21%,
+        #f99185 52%,
+        #cf556c 78%,
+        #b12a5b 100%
+        );
+        background-size: 100%;
+        margin-bottom: 2rem; /* changes the distance gap between the employee images and the text "our teams" */
+        font-size: 2.5rem;
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
+}
+
+.services__container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: #131313;
+}
+
+/* formats the sizes of pictures of employees */
+.services__card {
+    margin: 1rem;
+    height: 360px;
+    width: 250px;
+    /* height: 525px;
+    width: 400px; */
+    border-radius: 4px;
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%,
+    rgba(17, 17, 17, 0.6) 100%),
+    url('assets/leon.jpg');
+    background-size: cover;
+    /* positions text where i want */
+    position: relative;
+    color: #fff;
+}
+
+.services__card:nth-child(2){
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%,
+    rgba(17, 17, 17, 0.6) 100%),
+    url('assets/farah.jpg'); /* adding '/' in front of file will not load images
+    in browsers other than live server */
+}
+/*  */
+.services__card:nth-child(3){
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%,
+    rgba(17, 17, 17, 0.6) 100%),
+    url('assets/akira.jpg');
+}
+
+
+/* formats the texts in h2 tag in html services section */
+.services h2 {
+    position: relative;
+    top: 250px;
+    left: 30px;
+}
+
+/* formats the texts in p tag in html services section */
+.services__card p {
+    position: absolute;
+    top: 280px; /*keep the differnce of plus minus 30 with h2 top from above*/
+    left: 30px;
+}
+
+.services__card button {
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    background: #f77062;
+    position: absolute;
+    top: 313px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-left: 28px;
+}
+
+.services__card a {
+    color: #fff; 
+    text-decoration: none;
+}
+
+/* effects when the mouse is hovered on the images. not working.  */
+.services__card:hover {
+    transform: scale(1.075); /* transformation not working */
+    transition: 0.2s ease-out;
+    cursor: pointer;
+}
+/* gap or dimension of services section */
+@media screen and (max-width: 960px) {
+    .services{
+        height: 1400px;
+    }
+
+    .services h1{
+        font-size: 2rem;
+        margin-top: 3rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .services{
+        height: 1400px;
+    }
+    .services h1{
+        font-size: 1.2rem;
+    }
+    .services__card{
+        width: 300px;
+    }
+
+}
+
+/* Footer CSS */
+
+.footer__container{
+    background-color: #141414;
+    padding: 0 0 2rem 0; /* this is the gap between the logo and the bottom of the screen */
+    display: flex;
+    margin: 0px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+
+#footer__logo {
+    color: #fff;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 1rem; /* formats size of hotbeans at the bottom */
+}
+
+/* Social Icons */
+.social__icons--link {
+    color: #fff;
+    font-size: 24px;
+
+}
+
+/* brings the logo and the icons to the right from the center */
+.social__media {
+     /* formats the rights reserved texts */
+    width: 100%;
+    max-width: 1000px;
+}
+
+.social__media--wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1000px;
+    margin: 40px auto 0 auto;
+}
+
+/* creates space between icons */
+.social__icons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 240px;
+}
+
+.social__logo{
+    color: #fff;
+    justify-self: flex-start;
+    margin-left: 20px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.fa-instagram{
+    border-radius: 4px;
+    background: #f09433; 
+  background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); 
+  background: -webkit-linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+  background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
+    }
+
+.website__rights {
+    color: #fff; /* formats the rights text to white color */
+}
+
+@media screen and (max-width: 820px) {
+        #footer__logo {
+            position: relative;
+            top: -10px;
+        }
+
+        .social__media--wrap {
+            flex-direction: column;
+        }
+
+        .website__rights {
+            margin-bottom: 2rem; /* gaps between rights and the bottom of screen in mobile view */
+            white-space: nowrap;
+
+        }
+}
+
+
+/* @media screen and (max-width: 480px) {
+    .footer__{
+        margin: 0;
+        padding: 10px;
+        width: 100%;
+    }
+
+}  */
+
+

@@ -1,0 +1,106 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+/* COURSES CSS */
+.services {
+    padding-bottom: 50px;
+    padding-left: 70px;
+    padding-right: 50px;
+    background: #141414;
+    display: inline-block;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    height: 100vh; /* gap between the employees pictures and the footer section */
+}
+
+.services h1 {
+    text-align: center;
+    font-size: 2rem;
+}
+
+.services p {
+    color: #fff;
+    text-align: center;
+    font-size: 1.25rem;
+}
+
+.wrap {
+  display: inline-block;
+}
+
+.btn__center {
+  display: block;
+  margin: 0 auto;
+  
+}
+
+.flip-card {
+    padding-top: 2rem;
+    background: #141414;
+    background-color: transparent;
+    width: 320px;
+    height: 420px;
+    perspective: 1000px;
+    margin: 1rem;
+    flex-wrap: wrap;
+  }
+  
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  }
+  
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+  
+  .flip-card-front {
+    background-color: #4b0068;
+    color: white;
+  }
+  .flip-card-front p{
+    font-size: 1rem;
+  }
+
+  .flip-card-back {
+    background-color: #2980b9;
+    color: white;
+    transform: rotateY(180deg);
+  }
+  .flip-card-back p{
+    padding: 30px;
+    text-align: justify;
+    font-size: 1rem;
+  }
+
+  @media screen and (max-width: 960px) {
+    .services {
+        background: #141414;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+        padding-right: 4rem;
+    }
+  }
